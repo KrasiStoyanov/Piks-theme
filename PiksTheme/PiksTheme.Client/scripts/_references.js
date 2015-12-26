@@ -1,6 +1,7 @@
 ﻿/// <autosync enabled="true" />
 /// <reference path="../js/app.js" />
 /// <reference path="../js/home/about-me-section-directive.js" />
+/// <reference path="../js/home/category-view-directive.js" />
 /// <reference path="../js/home/contact-me-section-directive.js" />
 /// <reference path="../js/home/custom-background-image-directive.js" />
 /// <reference path="../js/home/home-controller.js" />

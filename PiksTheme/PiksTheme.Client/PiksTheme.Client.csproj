@@ -82,6 +82,7 @@
     <Content Include="index.html" />
     <Content Include="js\app.js" />
     <Content Include="js\home\about-me-section-directive.js" />
+    <Content Include="js\home\category-view-directive.js" />
     <Content Include="js\home\contact-me-section-directive.js" />
     <Content Include="js\home\custom-background-image-directive.js" />
     <Content Include="js\home\home-controller.js" />
@@ -1043,6 +1044,7 @@
     <Content Include="scripts\slider.js" />
     <Content Include="scripts\smooth-scroll.js" />
     <Content Include="views\directives\about-me-section-directive.html" />
+    <Content Include="views\directives\category-view-directive.html" />
     <Content Include="views\directives\contact-me-section-directive.html" />
     <Content Include="views\directives\my-clients-section-directive.html" />
     <Content Include="views\directives\portfolio-section-directive.html" />
