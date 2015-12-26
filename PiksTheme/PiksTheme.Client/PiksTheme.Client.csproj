@@ -81,7 +81,13 @@
     <Content Include="images\section-bg.jpg" />
     <Content Include="index.html" />
     <Content Include="js\app.js" />
+    <Content Include="js\home\about-me-section-directive.js" />
+    <Content Include="js\home\contact-me-section-directive.js" />
+    <Content Include="js\home\custom-background-image-directive.js" />
     <Content Include="js\home\home-controller.js" />
+    <Content Include="js\home\my-clients-section-directive.js" />
+    <Content Include="js\home\portfolio-section-directive.js" />
+    <Content Include="js\home\services-section-directive.js" />
     <Content Include="lib\angular\angular-animate.js" />
     <Content Include="lib\angular\angular-animate.min.js" />
     <Content Include="lib\angular\angular-aria.js" />
@@ -1036,6 +1042,11 @@
     <Content Include="scripts\nav.js" />
     <Content Include="scripts\slider.js" />
     <Content Include="scripts\smooth-scroll.js" />
+    <Content Include="views\directives\about-me-section-directive.html" />
+    <Content Include="views\directives\contact-me-section-directive.html" />
+    <Content Include="views\directives\my-clients-section-directive.html" />
+    <Content Include="views\directives\portfolio-section-directive.html" />
+    <Content Include="views\directives\services-section-directive.html" />
     <Content Include="views\partials\home\home.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1044,7 +1055,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\kendo\" />
-    <Folder Include="views\directives\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
