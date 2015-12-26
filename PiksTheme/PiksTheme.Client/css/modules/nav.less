@@ -1,0 +1,133 @@
+.-nav-fixed {
+  height: 94px !important;
+  position: relative;
+  height: 56px;
+  z-index: 998;
+
+  nav {
+    height: auto;
+    padding: @global-top-bottom-padding-s - 20px @global-left-right-padding-l;
+    position: fixed;
+    box-shadow: none;
+
+    .transition(0.2s);
+
+    .hide-on-med-and-down {
+      li {
+        a {
+          padding: 0 @global-left-right-padding-s;
+          color: darken(@white-color, 20%);
+
+          .transition(0.2s);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: transparent;
+
+          a {
+            color: @white-color;
+          }
+        }
+      }
+    }
+
+    .-button-collapse {
+      float: right;
+      display: none;
+
+      img {
+        height: 25px;
+      }
+
+      @media (max-width: @screen-m) {
+        display: block;
+      }
+    }
+
+    .-side-nav {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      // height: calc(100% + 60px);
+      // height: -moz-calc(100%);
+
+      position: absolute;
+      top: -100%;
+      right: 0;
+      z-index: 999;
+      overflow-y: scroll;
+
+      margin: 0;
+      background-color: #fff;
+      background-color: @black-color;
+      opacity: 0;
+      visibility: hidden;
+
+      .transition(0.2s);
+
+      &.-active {
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .-close-nav-wrapper {
+        padding: @global-top-bottom-padding-m @global-left-right-padding-m @global-top-bottom-padding-s @global-top-bottom-padding-m;
+        line-height: 1;
+
+        .-close-nav {
+          line-height: 1;
+          cursor: pointer;
+
+          img {
+            width: 15px;
+          }
+        }
+      }
+
+      li {
+        float: none;
+        padding: 0;
+
+        a {
+          display: block;
+          height: 64px;
+          padding: 0 @global-left-right-padding-m;
+          color: @white-color;
+          font-size: 1rem;
+          line-height: 64px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: lighten(@black-color, 5%);
+        }
+      }
+    }
+
+    @media (max-width: @screen-m) {
+      & {
+        padding: @global-top-bottom-padding-s - 20px @global-left-right-padding-m;
+      }
+
+      .-button-collapse {
+        float: right;
+      }
+    }
+
+    @media (max-width: @screen-s) {
+      & {
+        padding: @global-top-bottom-padding-s - 30px @global-left-right-padding-m;
+      }
+
+      .-button-collapse {
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

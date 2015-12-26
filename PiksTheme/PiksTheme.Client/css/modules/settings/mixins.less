@@ -1,0 +1,18 @@
+.transition(@seconds: 0.2s) {
+  transition: all ease-in @seconds;
+  -moz-transition: all ease-in @seconds;
+  -webkit-transition: all ease-in @seconds;
+}
+
+.border-radius(@radius: 3px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.rotate(@deg: 180deg) {
+  -webkit-transform: rotate(@deg) scale(1.0, 1.0);
+  -moz-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+}

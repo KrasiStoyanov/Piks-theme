@@ -1,0 +1,67 @@
+// FONT WEIGHT
+.-thin {
+  font-weight: 100;
+}
+
+.-light {
+  font-weight: 300;
+}
+
+.-regular {
+  font-weight: 400;
+}
+
+.-medium {
+  font-weight: 500;
+}
+
+.-bold {
+  font-weight: 700;
+}
+
+.-bold {
+  font-weight: 900;
+}
+
+// TEXT TRANSFORM
+.-upcase {
+  text-transform: uppercase;
+}
+
+// TEXT ALIGN
+.-text-center {
+  text-align: center;
+}
+
+.-text-left {
+  text-align: left;
+}
+
+.-text-right {
+  text-align: right;
+}
+
+// ABOUT TEXT
+.-about-text {
+  margin: auto;
+  min-width: 50%;
+  max-width: 100%;
+
+  @media (min-width: @screen-m) {
+    & {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: @screen-m) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: @screen-s) {
+  body {
+    font-size: 14px;
+  }
+}

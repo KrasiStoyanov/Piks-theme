@@ -1,0 +1,82 @@
+.-button {
+  display: block;
+  padding: 12px 16px;
+  margin: 10px 0;
+  max-width: 100%;
+  min-width: 140px;
+
+  outline: none;
+  cursor: pointer;
+  border-width: 3px;
+  border-style: solid;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: @small-font-size;
+
+  .transition(0.2s);
+
+  &.-radius {
+    .border-radius(3px);
+  }
+
+  &.-white {
+    border-color: @white-color;
+    color: @material-red;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: darken(@white-color, 3%);
+      background-color: darken(@white-color, 3%);
+    }
+  }
+
+  &.-material-red {
+    border-color: @material-red;
+    color: @white-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: darken(@material-red, 3%);
+      background-color: darken(@material-red, 3%);
+    }
+  }
+
+  &.-line {
+    background-color: transparent;
+
+    &.-material-red {
+      color: @material-red;
+    }
+
+    &.-white {
+      color: @white-color;
+    }
+
+    &.-material-red:hover,
+    &.-material-red:active,
+    &.-material-red:focus {
+      border-color: @material-red;
+      background-color: @material-red;
+      color: @white-color;
+    }
+
+    &.-white:hover,
+    &.-white:active,
+    &.-white:focus {
+      border-color: @white-color;
+      background-color: @white-color;
+      color: @material-red;
+    }
+  }
+}
+
+.-button-group {
+  .-button {
+    width: 140px;
+    display: inline-block;
+    margin: 0 15px;
+  }
+}

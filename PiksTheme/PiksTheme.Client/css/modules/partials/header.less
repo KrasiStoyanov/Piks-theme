@@ -1,0 +1,77 @@
+header {
+  width: 100%;
+  // height: 100vh;
+  position: relative;
+  z-index: 100;
+
+  background-position: center center;
+  background-size: cover;
+
+  opacity: 1;
+  visibility: visible;
+
+  .transition(0.5s);
+
+  h1 {
+    margin: 0 0 40px 0;
+    font-size: @header-font-size;
+
+    @media (orientation: portrait) and (max-width: @screen-m)  {
+      & {
+        font-size: @mega-big-font-size + 1em;
+      }
+    }
+
+    @media (orientation: landscape) and (max-width: @screen-m)  {
+      & {
+        font-size: @mega-big-font-size;
+      }
+    }
+
+    @media (max-width: @screen-s) {
+      & {
+        font-size: @mega-big-font-size;
+        padding: 0 @global-left-right-padding-s;
+      }
+    }
+  }
+
+  .-vbox-content {
+    @media (max-width: @screen-s) {
+      .-button {
+        width: auto;
+        min-width: auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .scroll-down {
+    display: table-row;
+    font-size: @mega-big-font-size;
+
+    svg {
+      width: 15px;
+      height: auto;
+
+      .scroll-down-circle {
+        animation: moving-circle 2s ease-in-out infinite;
+        animation-delay: 1s;
+
+        @keyframes moving-circle {
+          0% {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(195px);
+          }
+
+          100% {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}

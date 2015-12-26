@@ -1,0 +1,95 @@
+.-section {
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+
+  .-divider {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 50px;
+    height: 2px;
+    background-color: @material-red;
+  }
+
+  .-header {
+    font-size: @big-font-size;
+  }
+
+  &.portfolio-section {
+    position: relative;
+
+    .col {
+      padding: 0;
+    }
+
+    .row {
+      margin: 0;
+    }
+  }
+
+  &.about-me-section {
+    .-lightbox {
+      margin: auto;
+      margin-bottom: 30px;
+      width: 150px;
+      height: 150px;
+      cursor: auto;
+
+      @media (max-width: @screen-m) {
+        & {
+          width: 115px;
+          height: 115px;
+        }
+      }
+
+      @media (max-width: @screen-s) {
+        & {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  &.services-section {
+    .row {
+      margin: 0;
+    }
+  }
+
+  &.contact-me-section {
+    .row {
+      margin: 0;
+
+      input:focus:not([readonly]),
+      textarea:focus:not([readonly]) {
+        border-bottom: 1px solid @material-red;
+        box-shadow: 0 1px 0 0 @material-red;
+      }
+
+      input:focus:not([readonly]) + label,
+      textarea:focus:not([readonly]) + label {
+        color: @material-red;
+      }
+
+      input[type="submit"] {
+        margin-left: 10px;
+      }
+
+      textarea {
+        min-height: 85px;
+      }
+
+      .col.offset-m3 {
+        margin-left: 25%;
+      }
+
+      @media (max-width: @screen-s) {
+        .col.offset-m3 {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
