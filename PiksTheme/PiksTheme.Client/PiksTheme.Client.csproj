@@ -1044,7 +1044,6 @@
     <Content Include="scripts\slider.js" />
     <Content Include="scripts\smooth-scroll.js" />
     <Content Include="views\directives\about-me-section-directive.html" />
-    <Content Include="views\directives\category-view-directive.html" />
     <Content Include="views\directives\contact-me-section-directive.html" />
     <Content Include="views\directives\my-clients-section-directive.html" />
     <Content Include="views\directives\portfolio-section-directive.html" />

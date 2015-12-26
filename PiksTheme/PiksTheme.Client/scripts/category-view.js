@@ -1,26 +1,9 @@
 $(function () {
-  showCategoryView();
-  hideCategoryView();
+  createCategoryView();
 }());
 
-function showCategoryView() {
+function createCategoryView() {
   $('#portfolio .-content a').click(function () {
-    // var $body = $('body'),
-    //   $categoryView = $('.-category-view'),
-    //   $header = $('#home');
-    //
-    // if ($categoryView.hasClass('-active')) {
-    //   $categoryView.removeClass('-active');
-    //   setTimeout(function () {
-    //     $body.removeClass('-category-view-opened');
-    //   }, 500);
-    //   $header.removeClass('-hide');
-    // } else {
-    //   $categoryView.addClass('-active');
-    //   $body.addClass('-category-view-opened');
-    //   $header.addClass('-hide');
-    // }
-
     var $this = $(this),
       $body = $('body'),
       $categoryViewWrapper = $('<div/>'),
@@ -84,7 +67,7 @@ function showCategoryView() {
     $imageLink.addClass('-lightbox')
       .addClass('text-center');
 
-    $image.attr('src', '');
+    $image.attr('src', coverImageSrc);
 
     // Append a column to the images row
     $imageLink.append($image);
@@ -104,10 +87,13 @@ function showCategoryView() {
       $('#category-view').addClass('-active');
     }
     setTimeout(smoothFadeIn, 1);
+
+    removeCategoryView();
+    createLightbox();
   });
 }
 
-function hideCategoryView() {
+function removeCategoryView() {
   $('.-close-view').click(function () {
     var $body = $('body'),
       $categoryView = $('.-category-view');
@@ -115,66 +101,67 @@ function hideCategoryView() {
     $categoryView.removeClass('-active');
     setTimeout(function () {
       $body.removeClass('-category-view-opened');
+      $categoryView.remove();
     }, 700);
-    $categoryView.remove();
   });
 }
 
-/* <div id="category-view" class="-category-view -vbox -dark-bg">
-  <div class="-dark-bg -overlay -vbox">
-    <div class="-vbox-content">
-    </div>
-  </div>
-  <div class="-table -v-middle">
-    <div class="-section -category-heading -vbox" data-image="images/header-image-1.jpg">
-      <div class="-vbox-content -text-center -dark-overlay-5">
-        <a class="-close-view -margin-r-xl left">
-          <img class="-v-middle" src="lib/icons/close.svg" alt="Arrow Right">
-        </a>
-        <h3 class="-thin">Sample Category</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col l3 m6 s12">
-        <a href="#" class="-lightbox -text-center">
-          <img src="images/portfolio-image-1.jpg" alt="">
-        </a>
-      </div>
-      <div class="col l3 m6 s12">
-        <a href="#category-view" class="-lightbox -text-center">
-          <img src="images/portfolio-image-2.jpg" alt="">
-        </a>
-      </div>
-      <div class="col l3 m6 s12">
-        <a href="#category-view" class="-lightbox -text-center">
-          <img src="images/portfolio-image-3.jpg" alt="">
-        </a>
-      </div>
-      <div class="col l3 m6 s12">
-        <a href="#category-view" class="-lightbox -text-center">
-          <img src="images/portfolio-image-4.jpg" alt="">
-        </a>
-      </div>
-      <div class="col l3 m6 s12">
-        <a href="#category-view" class="-lightbox -text-center">
-          <img src="images/portfolio-image-3.jpg" alt="">
-        </a>
-      </div>
-      <div class="col l3 m6 s12">
-        <a href="#category-view" class="-lightbox -text-center">
-          <img src="images/portfolio-image-2.jpg" alt="">
-        </a>
-      </div>
-      <div class="col l3 m6 s12">
-        <a href="#category-view" class="-lightbox -text-center">
-          <img src="images/portfolio-image-1.jpg" alt="">
-        </a>
-      </div>
-      <div class="col l3 m6 s12">
-        <a href="#category-view" class="-lightbox -text-center">
-          <img src="images/portfolio-image-2.jpg" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
-</div> */
+function createLightbox() {
+  $('.-category-view .row a').click(function () {
+    var $this = $(this),
+      imageSrc = $this.find('img').attr('src'),
+      imageAlt = $this.find('img').attr('alt'),
+      $lightboxWrapper = $('<div/>'),
+      $vbox = $('<div/>'),
+      $lightboxContentWrapper = $('<div/>'),
+      $image = $('<img/>'),
+      $closeView = $('<a/>'),
+      $closeIcon = $('<img/>'),
+      windowScrollTop = $(window).scrollTop();
+
+    $lightboxWrapper.addClass('-dark-bg')
+      .addClass('-overlay')
+      .css('top', windowScrollTop);
+    $vbox.addClass('-vbox');
+
+    $lightboxContentWrapper.addClass('-vbox-content')
+      .addClass('-text-center');
+    $image.attr('src', imageSrc)
+      .attr('alt', imageAlt);
+
+    $closeView.addClass('-close-view')
+      .addClass('-margin-r-xl')
+      .addClass('left');
+
+    $closeIcon.addClass('-v-middle')
+      .attr('src', 'lib/icons/close.svg')
+      .attr('alt', 'Close icon');
+
+    $closeView.append($closeIcon);
+    $lightboxContentWrapper.append($image);
+    $lightboxWrapper.append($closeView);
+    $vbox.append($lightboxContentWrapper);
+    $lightboxWrapper.append($vbox);
+    $('body').prepend($lightboxWrapper);
+
+    // Fade in transition
+    function smoothFadeIn () {
+      $lightboxWrapper.addClass('-active');
+    }
+    setTimeout(smoothFadeIn, 1);
+
+    removeLightbox();
+  });
+}
+
+function removeLightbox () {
+  $('.-overlay .-close-view').click(function () {
+    var $overlay = $('.-overlay'),
+      $categoryView = $('.-category-view');
+
+    $overlay.removeClass('-active');
+    setTimeout(function () {
+      $overlay.remove();
+    }, 900);
+  });
+}
