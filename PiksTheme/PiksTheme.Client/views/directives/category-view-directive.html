@@ -1,0 +1,21 @@
+﻿<div id="category-view" class="-category-view -vbox -dark-bg" style="top: {{vm.topScroll}};">
+    {{vm.topScroll}}
+    <div class="-table -v-middle">
+        <div class="-section -category-heading -vbox">
+            <div class="-vbox-content -text-center -dark-overlay-3">
+                <a href="" class="-close-view -margin-r-xl left">
+                    <img src="lib/icons/close.svg" alt="Close icon" class="-v-middle" />
+                </a>
+                <h3 class="-thin">{{vm.category.content}}</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col l3 m6 s12" ng-repeat="picture in vm.pictures">
+                <a href="" class="-lightbox -text-center">
+                    <img src="{{picture}}" alt="Some alt" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

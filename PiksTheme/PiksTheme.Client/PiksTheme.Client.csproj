@@ -67,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\style.css" />
+    <Content Include="css\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
     <Content Include="images\header-bg.jpg" />
     <Content Include="images\header-image-1.JPG" />
     <Content Include="images\header-image-2.JPG" />
@@ -81,9 +84,12 @@
     <Content Include="images\section-bg.jpg" />
     <Content Include="index.html" />
     <Content Include="js\app.js" />
+    <Content Include="js\common\data.js" />
     <Content Include="js\home\category-view-directive.js" />
     <Content Include="js\home\custom-background-image-directive.js" />
     <Content Include="js\home\home-controller.js" />
+    <Content Include="js\home\main-controller.js" />
+    <Content Include="js\home\pictures-service.js" />
     <Content Include="lib\angular\angular-animate.js" />
     <Content Include="lib\angular\angular-animate.min.js" />
     <Content Include="lib\angular\angular-aria.js" />
@@ -1019,6 +1025,10 @@
     <Content Include="lib\font-awesome\scss\_rotated-flipped.scss" />
     <Content Include="lib\font-awesome\scss\_stacked.scss" />
     <Content Include="lib\font-awesome\scss\_variables.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1038,6 +1048,7 @@
     <Content Include="scripts\nav.js" />
     <Content Include="scripts\slider.js" />
     <Content Include="scripts\smooth-scroll.js" />
+    <Content Include="views\directives\category-view-directive.html" />
     <Content Include="views\partials\home\home.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1046,7 +1057,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\kendo\" />
-    <Folder Include="views\directives\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

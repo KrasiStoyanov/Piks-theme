@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    function HomeController(pictures) {
+    function MainController(pictures) {
         var vm = this;
         vm.categories = pictures.getCategories();
         vm.showPicturesDirective = false;
@@ -19,5 +19,5 @@
     }
 
     angular.module('piksTheme.controllers')
-        .controller('HomeController', ['pictures', HomeController]);
+        .controller('MainController', ['pictures', MainController]);
 }());

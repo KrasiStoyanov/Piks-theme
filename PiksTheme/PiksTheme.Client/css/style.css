@@ -1,4 +1,4 @@
-* {
+﻿* {
   margin: 0;
   padding: 0;
 }
@@ -683,8 +683,8 @@ a {
   }
 }
 .-category-view {
-  opacity: 0;
-  visibility: hidden;
+  /*opacity: 0;
+  visibility: hidden;*/
   display: block;
   overflow-y: auto;
   position: absolute;
@@ -1005,10 +1005,6 @@ footer .-social-links i {
 }
 @media (max-width: 600px) {
   .-section.contact-me-section .row .col.offset-m3 {
-    margin-left: 0;
-  }
-}
-on .row .col.offset-m3 {
     margin-left: 0;
   }
 }

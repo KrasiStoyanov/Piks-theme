@@ -16,7 +16,9 @@
     }
 
     angular.module('piksTheme.directives', []);
-    angular.module('piksTheme.controllers', []);
-    angular.module('piksTheme', ['ngRoute', 'piksTheme.controllers', 'piksTheme.directives'])
-        .config(['$routeProvider', config]);
+    angular.module('piksTheme.services', []);
+    angular.module('piksTheme.controllers', ['piksTheme.services']);
+    angular.module('piksTheme', ['ngRoute', 'piksTheme.controllers', 'piksTheme.services', 'piksTheme.directives'])
+        .config(['$routeProvider', config])
+        .constant('baseServiceUrl', '');
 }());
