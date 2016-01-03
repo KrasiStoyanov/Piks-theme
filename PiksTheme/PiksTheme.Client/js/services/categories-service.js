@@ -48,8 +48,8 @@
         }
 
         return {
-            getCategories: getPictureCategories,
-            getCategoryDetails: getPictureCategoryDetails
+            getCategories: getCategories,
+            getCategoryDetails: getCategoryDetails
         };
     }
 
