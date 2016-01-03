@@ -7,7 +7,7 @@
     <div class="-content">
         <div class="row">
             <div class="col l3 m6 s12" ng-repeat="category in vm.categories">
-                <a class="-lightbox -text-center" ng-click="vm.getPictures(category.id)">
+                <a class="-lightbox -text-center" ng-click="openCategoryDetails(category.id)">
                     <div class="-caption">
                         <div class="-caption-content">
                             <p class="-text-center">{{category.content}}</p>
@@ -35,7 +35,7 @@
 </div>
 
 <!-- MY CLIENTS SECTION -->
-<div id="my-clients" class="-section my-clients-section" data-image="images/header-image-3.jpg">
+<div id="my-clients" class="-section my-clients-section" data-image="images/header-image-2.jpg">
     <div class="-dark-overlay-6 -padding-xl">
         <div class="-header -text-center">
             <p class="-upcase -light">What my clients say about me</p>

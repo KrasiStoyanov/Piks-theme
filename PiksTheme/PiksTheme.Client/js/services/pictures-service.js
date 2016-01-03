@@ -31,6 +31,7 @@
         var pictures = [
             'http://i.telegraph.co.uk/multimedia/archive/02690/Anne-Guichard_2690182k.jpg',
             'http://coolwildlife.com/wp-content/uploads/galleries/post-1593/Brown%20Bear%20Picture%20001.jpg',
+            'http://i.telegraph.co.uk/multimedia/archive/03235/potd-husky_3235255k.jpg',
             'http://cdn1.matadornetwork.com/blogs/1/2015/04/lion-photo.jpg',
             'http://ichef-1.bbci.co.uk/news/976/media/images/83351000/jpg/_83351965_explorer273lincolnshirewoldssouthpicturebynicholassilkstone.jpg'
         ];
