@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="-dark-bg" ng-app="piksTheme" ng-controller="BaseController as bc" ng-cloak>
-    <div category-view ng-show="active"></div>
+<body class="-dark-bg" 
+      ng-app="piksTheme" 
+      ng-controller="BaseController as bc"
+      ng-class="{'-category-view-opened': isCategoryDetailsOpen == true}" 
+      ng-cloak>
+
+    <div category-view ng-show="isCategoryDetailsOpen"></div>
     <header id="home" class="-section" data-image="images/header-image-1.jpg">
         <div class="-vbox -dark-overlay-5">
             <div class="-nav-fixed -table-row">

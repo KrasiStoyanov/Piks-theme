@@ -1,11 +1,11 @@
 ﻿(function () {
     'use strict';
 
-    function HomeController(pictures) {
+    function HomeController($document, pictures) {
         var vm = this;
         vm.categories = pictures.getCategories();
 
-        var appElement = document.querySelector('[ng-app=piksTheme]');
+        var appElement = $('[ng-app=piksTheme]').get(0);
         var $baseScope = angular.element(appElement).scope();
 
         $baseScope.openCategoryDetails = function (categoryId) {
@@ -14,17 +14,17 @@
             $baseScope.category = details.category;
             $baseScope.pictures = details.pictures;
 
-            $baseScope.topScroll = $(window).scrollTop();
-            $baseScope.active = true;
+            $baseScope.categoryDetailsTopScroll = $(window).scrollTop();
+            $baseScope.isCategoryDetailsOpen = true;
             console.log();
         };
 
         $baseScope.closeCategoryDetails = function () {
-            $baseScope.active = false;
+            $baseScope.isCategoryDetailsOpen = false;
             console.log();
         }
     }
 
     angular.module('piksTheme.controllers')
-        .controller('HomeController', ['pictures', HomeController]);
+        .controller('HomeController', ['$document','pictures', HomeController]);
 }());
