@@ -13,10 +13,23 @@
             return defered.promise;
         }
 
-        function post(url, postData) {
+        function post(url, payload) {
             var defered = $q.defer();
 
-            $http.post(baseServiceUrl + '/' + url, postData)
+            $http.post(baseServiceUrl + '/' + url, payload)
+                .then(function (response) {
+                    defered.resolve(response.data);
+                }, function (error) {
+                    defered.reject(error);
+                });
+
+            return defered.promise;
+        }
+
+        function put(url, payload) {
+            var defered = $q.defer();
+
+            $http.put(baseServiceUrl + '/' + url, payload)
                 .then(function (response) {
                     defered.resolve(response.data);
                 }, function (error) {
@@ -28,7 +41,8 @@
 
         return {
             get: get,
-            post: post
+            post: post,
+            put: put
         }
     }
 
