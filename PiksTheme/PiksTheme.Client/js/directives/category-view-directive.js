@@ -7,14 +7,19 @@
             templateUrl: 'views/directives/category-view-directive.html',
             link: function () {
                 function openCategoryDetailsjQuery() {
-                    $('#category-view').addClass('-active');
+                    $('#category-view')
+                        .css("top", $(window).scrollTop())
+                        .addClass('-active');
+
                     setTimeout(function () {
                         $('body').addClass('-category-view-opened');
                     }, 1);
                 }
 
                 function closeCategoryDetailsjQuery() {
-                    $('.-category-view').removeClass('-active');
+                    $('.-category-view')
+                        .removeClass('-active');
+
                     setTimeout(function () {
                         $('body').removeClass('-category-view-opened');
                     }, 700);
