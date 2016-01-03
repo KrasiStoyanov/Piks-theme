@@ -1,13 +1,13 @@
 ﻿(function () {
     'use strict';
 
-    function HomeController($timeout, pictures) {
+    function HomeController(categories) {
         var vm = this;
 
         vm.categories = pictures.getPictureCategories();
-        //vm.aboutMe = person.getAboutMeText();
-        //vm.clientQuotes = person.getClientQuotes();
-        //vm.services = person.getServices();
+        //vm.aboutMe = details.getAboutMeText();
+        //vm.clientQuotes = details.getClientQuotes();
+        //vm.services = details.getServices();
 
         vm.openCategoryDetails = function (categoryId) {
             var details = pictures.getPictureCategoryDetails(categoryId);
@@ -17,10 +17,11 @@
         };
 
         vm.sendContactForm = function (form) {
-            // throw new NotImplementedException();
+            // contacts.sendForm(form);
+            // notifier.success("Contact message sent");
         }
     }
 
     angular.module('piksTheme.controllers')
-        .controller('HomeController', ['$timeout', 'pictures', HomeController]);
+        .controller('HomeController', ['categories', HomeController]);
 }());

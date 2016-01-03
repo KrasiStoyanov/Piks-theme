@@ -1,6 +1,6 @@
 ﻿(function () {
-    function picturesService(data) {
-        var categories = [
+    function categoriesService(data) {
+        var exampleCategories = [
                 {
                     id: 0,
                     content: 'Category 0',
@@ -28,7 +28,7 @@
                 }
         ];
 
-        var pictures = [
+        var examplePictures = [
             'http://i.telegraph.co.uk/multimedia/archive/02690/Anne-Guichard_2690182k.jpg',
             'http://coolwildlife.com/wp-content/uploads/galleries/post-1593/Brown%20Bear%20Picture%20001.jpg',
             'http://i.telegraph.co.uk/multimedia/archive/03235/potd-husky_3235255k.jpg',
@@ -36,23 +36,23 @@
             'http://ichef-1.bbci.co.uk/news/976/media/images/83351000/jpg/_83351965_explorer273lincolnshirewoldssouthpicturebynicholassilkstone.jpg'
         ];
 
-        function getPictureCategories() {
-            return categories;
+        function getCategories() {
+            return exampleCategories;
         }
 
-        function getPictureCategoryDetails(id) {
+        function getCategoryDetails(id) {
             return {
-                category: categories[id],
-                pictures: pictures
+                details: exampleCategories[id],
+                pictures: examplePictures
             };
         }
 
         return {
-            getPictureCategories: getPictureCategories,
-            getPictureCategoryDetails: getPictureCategoryDetails
+            getCategories: getPictureCategories,
+            getCategoryDetails: getPictureCategoryDetails
         };
     }
 
     angular.module('piksTheme.services')
-        .factory('pictures', ['data', picturesService]);
+        .factory('categories', ['data', categoriesService]);
 }());
