@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="-dark-bg" ng-controller="BaseController as base">
+<body class="-dark-bg" ng-controller="MainController as main">
     <header id="home" class="-section" data-image="images/header-image-1.jpg">
         <div class="-vbox -dark-overlay-5">
             <div class="-nav-fixed -table-row">
@@ -94,8 +94,10 @@
     <script src="js/controllers/home-controller.js"></script>
     <script src="js/controllers/base-controller.js"></script>
 
-    <script src="js/services/data-service.js"></script>
-    <script src="js/services/pictures-service.js"></script>
+    <script src="js/services/common/data-service.js"></script>
+    <script src="js/services/identity/auth-service.js"></script>
+    <script src="js/services/identity/identity-service.js"></script>
+    <script src="js/services/categories-service.js"></script>
 
     <script src="js/directives/category-view-directive.js"></script>
     <script src="js/directives/custom-background-image-directive.js"></script>
