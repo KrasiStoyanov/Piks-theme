@@ -1,13 +1,12 @@
 ﻿<div id="category-view" 
      class="-category-view -vbox -dark-bg" 
-     style="top: {{vm.categoryDetailsTopScroll}}px !important"
-     ng-show="isCategoryDetailsOpen">
+     style="top: {{vm.categoryDetailsTopScroll}}px !important">
 
     <div class="-table -v-middle">
         <div class="-section -category-heading -vbox">
             <div class="-vbox-content -text-center -dark-overlay-3">
-                <a href="" class="-close-view -margin-r-xl left">
-                    <img src="lib/icons/close.svg" alt="Close icon" class="-v-middle" ng-click="vm.closeCategoryDetails()"/>
+                <a href="" class="-close-view -margin-r-xl left category-box-close">
+                    <img src="lib/icons/close.svg" alt="Close icon" class="-v-middle"/>
                 </a>
                 <h3 class="-thin">{{vm.category.content}}</h3>
             </div>

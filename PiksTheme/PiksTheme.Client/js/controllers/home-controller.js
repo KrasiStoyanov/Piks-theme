@@ -1,12 +1,11 @@
 ﻿(function () {
     'use strict';
 
-    function HomeController(pictures) {
+    function HomeController($timeout, pictures) {
         var vm = this;
-        var appElement = $('[ng-app=piksTheme]').get(0); 
-        var base = angular.element(appElement).scope(); 
-        
+
         vm.categories = pictures.getPictureCategories();
+        //vm.aboutMe = person.getAboutMeText();
 
         vm.openCategoryDetails = function (categoryId) {
             var details = pictures.getPictureCategoryDetails(categoryId);
@@ -15,11 +14,10 @@
             vm.category = details.category;
             vm.pictures = details.pictures;
 
-            base.isCategoryDetailsOpen = true;
+            openCategoryDetailsjQuery();
         };
 
         vm.closeCategoryDetails = function () {
-            base.isCategoryDetailsOpen = false;
         }
 
         vm.sendContactForm = function (form) {
@@ -28,5 +26,5 @@
     }
 
     angular.module('piksTheme.controllers')
-        .controller('HomeController', ['pictures', HomeController]);
+        .controller('HomeController', ['$timeout', 'pictures', HomeController]);
 }());
