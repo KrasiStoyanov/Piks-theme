@@ -4,7 +4,7 @@
     function categoryView() {
         return {
             restrict: 'A',
-            templateUrl: 'views/directives/category-view-directive.html'
+            templateUrl: 'views/directives/category-view-directive.html',
         }
     }
 

@@ -1,30 +1,32 @@
 ﻿(function () {
     'use strict';
 
-    function HomeController($document, pictures) {
+    function HomeController(pictures) {
         var vm = this;
-        vm.categories = pictures.getCategories();
+        var appElement = $('[ng-app=piksTheme]').get(0); 
+        var base = angular.element(appElement).scope(); 
+        
+        vm.categories = pictures.getPictureCategories();
 
-        var appElement = $('[ng-app=piksTheme]').get(0);
-        var $baseScope = angular.element(appElement).scope();
+        vm.openCategoryDetails = function (categoryId) {
+            var details = pictures.getPictureCategoryDetails(categoryId);
+            vm.categoryDetailsTopScroll = $(window).scrollTop();
 
-        $baseScope.openCategoryDetails = function (categoryId) {
-            var details = pictures.getCategoryDetails(categoryId);
+            vm.category = details.category;
+            vm.pictures = details.pictures;
 
-            $baseScope.category = details.category;
-            $baseScope.pictures = details.pictures;
-
-            $baseScope.categoryDetailsTopScroll = $(window).scrollTop();
-            $baseScope.isCategoryDetailsOpen = true;
-            console.log();
+            base.isCategoryDetailsOpen = true;
         };
 
-        $baseScope.closeCategoryDetails = function () {
-            $baseScope.isCategoryDetailsOpen = false;
-            console.log();
+        vm.closeCategoryDetails = function () {
+            base.isCategoryDetailsOpen = false;
+        }
+
+        vm.sendContactForm = function (form) {
+            // throw new NotImplementedException();
         }
     }
 
     angular.module('piksTheme.controllers')
-        .controller('HomeController', ['$document','pictures', HomeController]);
+        .controller('HomeController', ['pictures', HomeController]);
 }());

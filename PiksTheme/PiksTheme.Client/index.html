@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="piksTheme" ng-cloak>
 <head>
     <title>Piks Theme</title>
     <meta charset="utf-8" />
@@ -7,13 +7,7 @@
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="-dark-bg" 
-      ng-app="piksTheme" 
-      ng-controller="BaseController as bc"
-      ng-class="{'-category-view-opened': isCategoryDetailsOpen == true}" 
-      ng-cloak>
-
-    <div category-view ng-show="isCategoryDetailsOpen"></div>
+<body class="-dark-bg" ng-controller="BaseController as base" ng-class="{'-category-view-opened': isCategoryDetailsOpen == true}">
     <header id="home" class="-section" data-image="images/header-image-1.jpg">
         <div class="-vbox -dark-overlay-5">
             <div class="-nav-fixed -table-row">
@@ -67,8 +61,7 @@
         </div>
     </header>
 
-    <div id="main-content" ng-view>
-    </div>
+    <div ng-view></div>
 
     <footer>
         <div class="-dark-bg -padding-l -social-links -text-center">

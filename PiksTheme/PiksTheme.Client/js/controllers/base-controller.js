@@ -3,7 +3,6 @@
 
     function BaseController($scope) {
         $scope.isAuthenticated = false;
-        //$scope.isCategoryDetailsOpen = false;
     }
 
     angular.module('piksTheme.controllers')

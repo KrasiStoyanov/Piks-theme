@@ -36,11 +36,11 @@
             'http://ichef-1.bbci.co.uk/news/976/media/images/83351000/jpg/_83351965_explorer273lincolnshirewoldssouthpicturebynicholassilkstone.jpg'
         ];
 
-        function getCategories() {
+        function getPictureCategories() {
             return categories;
         }
 
-        function getCategoryDetails(id) {
+        function getPictureCategoryDetails(id) {
             return {
                 category: categories[id],
                 pictures: pictures
@@ -48,8 +48,8 @@
         }
 
         return {
-            getCategories: getCategories,
-            getCategoryDetails: getCategoryDetails
+            getPictureCategories: getPictureCategories,
+            getPictureCategoryDetails: getPictureCategoryDetails
         };
     }
 
