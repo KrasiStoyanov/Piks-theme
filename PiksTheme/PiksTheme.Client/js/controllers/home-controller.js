@@ -4,13 +4,13 @@
     function HomeController(categories) {
         var vm = this;
 
-        vm.categories = pictures.getPictureCategories();
+        vm.categories = categories.getCategories();
         //vm.aboutMe = details.getAboutMeText();
         //vm.clientQuotes = details.getClientQuotes();
         //vm.services = details.getServices();
 
         vm.openCategoryDetails = function (categoryId) {
-            var details = pictures.getPictureCategoryDetails(categoryId);
+            var details = categories.getCategoryDetails(categoryId);
 
             vm.category = details.category;
             vm.pictures = details.pictures;
