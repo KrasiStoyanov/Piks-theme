@@ -11,6 +11,8 @@
                         .css("top", $(window).scrollTop())
                         .addClass('-active');
 
+                    $('#category-view').offset().top == $('#category-view').css('top');
+
                     setTimeout(function () {
                         $('body').addClass('-category-view-opened');
                     }, 1);
