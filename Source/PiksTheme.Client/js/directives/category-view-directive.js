@@ -25,6 +25,10 @@
                     setTimeout(function () {
                         $('body').removeClass('-category-view-opened');
                     }, 700);
+
+                    setTimeout(function () {
+                        $('#category-view').css('top', '');
+                    }, 700);
                 }
                 
                 $('.category-box').on('click', openCategoryDetailsjQuery);
