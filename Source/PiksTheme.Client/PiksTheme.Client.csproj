@@ -84,6 +84,7 @@
     <Content Include="images\section-bg.jpg" />
     <Content Include="index.html" />
     <Content Include="js\app.js" />
+    <Content Include="js\directives\lightbox-directive.js" />
     <Content Include="js\services\common\data-service.js" />
     <Content Include="js\directives\category-view-directive.js" />
     <Content Include="js\directives\custom-background-image-directive.js" />
@@ -1035,6 +1036,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="js\admin\saveme.git" />
+    <Content Include="views\directives\lightbox-directive.html" />
     <Content Include="views\partials\admin\saveme.git" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

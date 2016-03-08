@@ -6,20 +6,20 @@
             restrict: 'A',
             templateUrl: 'views/directives/lightbox-directive.html',
             link: function () {
-                function openCategoryDetailsjQuery() {
-                    debugger;
-                    $('#lightbox')
-                        .css('top', $(window).scrollTop())
-                        .addClass('-active');
+                // function openLightbox() {
+                //     debugger;
+                //     $('#lightbox')
+                //         .css('top', $(window).scrollTop())
+                //         .addClass('-active');
+                //
+                //     $('#lightbox').offset().top = $('#lightbox').css('top');
+                //
+                //     setTimeout(function () {
+                //         $('body').addClass('-category-view-opened');
+                //     }, 1);
+                // }
 
-                    $('#lightbox').offset().top == $('#lightbox').css('top');
-
-                    setTimeout(function () {
-                        $('body').addClass('-category-view-opened');
-                    }, 1);
-                }
-
-                function closeCategoryDetailsjQuery() {
+                function closeLightbox() {
                     $('#lightbox')
                         .removeClass('-active');
 
@@ -27,9 +27,9 @@
                         $('#lightbox').css('top', '');
                     }, 700);
                 }
-                
-                $('.lightbox-link').on('click', openCategoryDetailsjQuery);
-                $('.-close-view').on('click', closeCategoryDetailsjQuery);
+
+                // $('.lightbox-link').on('click', openLightbox);
+                $('.-close-view').on('click', closeLightbox);
             }
         }
     }

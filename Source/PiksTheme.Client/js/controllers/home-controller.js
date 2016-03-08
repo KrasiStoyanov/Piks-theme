@@ -17,26 +17,7 @@
         };
 
         vm.openLightbox = function (imageSrc) {
-            $('#lightbox')
-                .css('top', $(window).scrollTop())
-                .addClass('-active');
-
-            $('#lightbox').offset().top == $('#lightbox').css('top');
-
-            setTimeout(function () {
-                $('body').addClass('-category-view-opened');
-            }, 1);
-
             vm.lightboxSrc = imageSrc;
-        };
-
-        vm.closeLightbox = function () {
-            $('#lightbox')
-                    .removeClass('-active');
-
-            setTimeout(function () {
-                $('#lightbox').css('top', '');
-            }, 700);
         };
 
         vm.sendContactForm = function (form) {

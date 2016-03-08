@@ -30,9 +30,27 @@
                         $('#category-view').css('top', '');
                     }, 700);
                 }
-                
+
                 $('.category-box').on('click', openCategoryDetailsjQuery);
                 $('.category-box-close').on('click', closeCategoryDetailsjQuery);
+
+                // function openLightbox(imageSrc) {
+                //     vm.lightboxSrc = imageSrc;
+                //     console.log(vm.lightboxSrc);
+                //     $('#lightbox')
+                //         .css('top', $(window).scrollTop())
+                //         .addClass('-active');
+                //
+                //     $('#lightbox').offset().top = $('#lightbox').css('top');
+                //
+                //     setTimeout(function () {
+                //         $('body').addClass('-category-view-opened');
+                //     }, 1);
+                // }
+                //
+                // $('.lightbox-link').on('click', openLightbox);
+                // console.log($('.lightbox-link').addClass('hello'));
+                console.log($('.row .lightbox-link'));
             }
         }
     }

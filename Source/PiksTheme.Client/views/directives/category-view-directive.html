@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col l3 m6 s12" ng-repeat="picture in vm.pictures">
                 <a href="" ng-click="vm.openLightbox(picture)" class="lightbox-link -lightbox -text-center">
-                    <img src="{{picture}}" alt="Some alt" />
+                    <img ng-src="{{picture}}" alt="Some alt" />
                 </a>
             </div>
         </div>
