@@ -16,10 +16,6 @@
             vm.pictures = details.pictures;
         };
 
-        vm.openLightbox = function (imageSrc) {
-            vm.lightboxSrc = imageSrc;
-        };
-
         vm.sendContactForm = function (form) {
             // contacts.sendForm(form);
             // notifier.success("Contact message sent");

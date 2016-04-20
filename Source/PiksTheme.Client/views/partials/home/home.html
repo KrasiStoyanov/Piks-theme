@@ -1,6 +1,6 @@
 ﻿<div category-view></div>
 <div lightbox></div>
-<div id="main-content">
+<div id="main-content" control="control">
     <!-- PORTFOLIO SECTION -->
     <div id="portfolio" class="-section portfolio-section">
         <div class="-header -dark-bg -padding-l -text-center">
@@ -10,7 +10,7 @@
         <div class="-content -dark-overlay-5">
             <div class="row">
                 <div class="col l3 m6 s12" ng-repeat="category in vm.categories">
-                    <a class="-lightbox -text-center category-box" ng-click="vm.openCategoryDetails(category.id)">
+                    <a class="-lightbox -text-center category-box" ng-click="control.openCategoryDetailsjQuery()">
                         <div class="-caption">
                             <div class="-caption-content">
                                 <p class="-text-center">{{category.content}}</p>

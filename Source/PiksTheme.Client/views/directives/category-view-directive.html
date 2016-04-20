@@ -1,20 +1,32 @@
-﻿<div id="category-view" class="-category-view -vbox -dark-bg">
-    <div class="-table -v-middle">
-        <div class="-section -category-heading -vbox">
-            <div class="-vbox-content -text-center -dark-overlay-3">
-                <a href="" class="-close-view -margin-r-xl left category-box-close">
-                    <img src="lib/icons/close.svg" alt="Close icon" class="-v-middle"/>
-                </a>
-                <h3 class="-thin">{{vm.category.content}}</h3>
-            </div>
+<div id="category-view" class="-category-view -vbox -dark-bg">
+  <div class="-relative">
+    <div id="lightbox" class="-dark-bg -overlay">
+      <a class="-close-view -margin-r-xl left">
+        <img class="-v-middle" src="lib/icons/close.svg" alt="Close icon">
+      </a>
+      <div class="-vbox">
+        <div class="-vbox-content -text-center">
+          <img src="{{lightboxSrc}}">
         </div>
-
-        <div class="row">
-            <div class="col l3 m6 s12" ng-repeat="picture in vm.pictures">
-                <a href="" ng-click="vm.openLightbox(picture)" class="lightbox-link -lightbox -text-center">
-                    <img ng-src="{{picture}}" alt="Some alt" />
-                </a>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="-table -v-middle">
+      <div class="-section -category-heading -vbox">
+        <div class="-vbox-content -text-center -dark-overlay-3">
+          <a href="" class="-close-view -margin-r-xl left category-box-close">
+            <img src="lib/icons/close.svg" alt="Close icon" class="-v-middle"/>
+          </a>
+          <h3 class="-thin">{{category.content}}</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col l3 m6 s12" ng-repeat="picture in pictures">
+          <a href="" ng-click="openLightbox(picture)" class="lightbox-link -lightbox -text-center">
+            <img ng-src="{{picture}}" alt="Some alt"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

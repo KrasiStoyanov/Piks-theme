@@ -42,7 +42,7 @@
 
         function getCategoryDetails(id) {
             return {
-                details: exampleCategories[id],
+                category: exampleCategories[id],
                 pictures: examplePictures
             };
         }
